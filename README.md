@@ -4,6 +4,8 @@ Infos und Beispiele zum Meowbit von https://kittenbot.cn
 
 Das [Meowbit](https://www.kittenbot.cc/collections/frontpage/products/meowbit-codable-console-for-microsoft-makecode-arcade) ist eine kleine Spielekonsole des chinesischen Herstellers Kittenbot. Du kannst es [auf Amazon kaufen](https://amzn.to/2R8b7Ja). Auch Adafruit [vertreibt es](https://blog.adafruit.com/2019/08/01/new-product-kittenbot-meowbit-codable-console-for-makecode-arcade/) seit August 2018.
 
+![Meowbit, bbc:microbit, Calliope Mini](images/00-meowbit_microbit_calliope.jpg)
+
 Das Meowbit kann auf drei Arten programmiert werden:
 
 * https://arcade.makecode.com/ von Microsoft. Das Meowbit ist eine der offiziell unterstützten Spielekonsolen
