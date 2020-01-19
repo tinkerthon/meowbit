@@ -2,9 +2,36 @@
 
 Infos und Beispiele zum Meowbit von https://kittenbot.cn
 
-Das [Meowbit](https://www.kittenbot.cc/collections/frontpage/products/meowbit-codable-console-for-microsoft-makecode-arcade) ist eine kleine Spielekonsole des chinesischen Herstellers Kittenbot. Du kannst es [auf Amazon kaufen](https://amzn.to/2R8b7Ja). Auch Adafruit [vertreibt es](https://blog.adafruit.com/2019/08/01/new-product-kittenbot-meowbit-codable-console-for-makecode-arcade/) seit August 2018.
+Das [Meowbit](https://www.kittenbot.cc/collections/frontpage/products/meowbit-codable-console-for-microsoft-makecode-arcade) ist eine kleine Spielekonsole des chinesischen Herstellers Kittenbot. Du kannst es [auf Amazon kaufen](https://amzn.to/2R8b7Ja). Auch Adafruit [vertreibt es](https://blog.adafruit.com/2019/08/01/new-product-kittenbot-meowbit-codable-console-for-makecode-arcade/) seit August 2019.
 
 ![Meowbit, bbc:microbit, Calliope Mini](images/00-meowbit_microbit_calliope.jpg)
+
+Das Meowbit nutzt als Rechenkern einen STM32F401RET6, das ist ein 32-Bit-ARM-Cortex-M4-Prozessor ([Datenblatt](http://www.farnell.com/datasheets/1848998.pdf)). Darüber hinaus ist eine beeindruckende Menge an Hardware eingebaut:
+
+* LED für Lade- / Arbeitsanzeige
+* Lichtsensor
+* Schiebeschalter zum Ein-/Ausschalten
+* zwei programmierbare LED
+* Reset-Taste
+* DFU-Modus-Taste (auch zum Aufrufen des Menüs durch die Makecode-Firmware)
+* 160 x 128 tft Farbbildschirm
+* Temperaturfühler
+* vier programmierbare Richtungstasten
+* programmierbarer Summer
+* zwei programmierbare Tasten A und B
+* 40-Pin-Goldkontaktleiste, kompatibel zum micro:bit
+* USB-Port zum Laden und Programmieren
+* SD-Kartenslot (zum Speichern von Programmen und nachträglichen Erweitern um ein Bluetooth- oder WLAN-Modul)
+* Klinkenbuchse zum Verbinden mehrerer Geräte (JacDac)
+* 6-Achsen-Gyroskop und Beschleunigungsmesser
+* 3,7 V Lithium-Batterie-Schnittstelle
+
+Standardmäßig sind 2 MByte des SPI-Flash-Speichers mit einer Unicode-Zeichentabelle
+belegt.
+
+Hier ist die Pinbelegung der 40-poligen Steckerleiste (Stand: 2020-01-18. [Original](https://meowbit-doc.kittenbot.cn/#/more/intro)):
+
+![Pinbelegung](images/1Sbv9O.png)
 
 Das Meowbit kann auf drei Arten programmiert werden:
 
@@ -58,3 +85,12 @@ Hier ein weiteres Beispiel:
 Wie die Statusleuchte an Macs:
 
 ![Atmende LED](images/03-breathing-led.png)
+
+## 04 Tasten per Interrupt
+
+Für gute Responsivität können die Tasten per Interrupt abgefragt werden. Einen passenden Block habe ich nicht gefunden (obwohl er in der [Originaldokumentation](https://meowbit-doc.kittenbot.cn/#/kittenblock/02%E6%8C%89%E9%94%AE%E6%A3%80%E6%B5%8B) abgebildet ist), aber [hier](code/04 keys.py) ist der Python-Code.
+
+Ich habe in der Anleitung ein [komplexeres Beispiel](code/05 keys-intensity.sb3) inklusive der Blöcke gefunden:
+
+![mehr Tasten](images/05-keys-intensity.png)
+
