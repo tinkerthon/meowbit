@@ -88,9 +88,9 @@ Wie die Statusleuchte an Macs:
 
 ## 04 Tasten per Interrupt
 
-Für gute Responsivität können die Tasten per Interrupt abgefragt werden. Einen passenden Block habe ich nicht gefunden (obwohl er in der [Originaldokumentation](https://meowbit-doc.kittenbot.cn/#/kittenblock/02%E6%8C%89%E9%94%AE%E6%A3%80%E6%B5%8B) abgebildet ist), aber [hier](code/04 keys.py) ist der Python-Code.
+Für gute Responsivität können die Tasten per Interrupt abgefragt werden. Einen passenden Block habe ich nicht gefunden (obwohl er in der [Originaldokumentation](https://meowbit-doc.kittenbot.cn/#/kittenblock/02%E6%8C%89%E9%94%AE%E6%A3%80%E6%B5%8B) abgebildet ist), aber [hier](code/04+keys.py) ist der Python-Code.
 
-Ich habe in der Anleitung ein [komplexeres Beispiel](code/05 keys-intensity.sb3) inklusive der Blöcke gefunden:
+Ich habe in der Anleitung ein [komplexeres Beispiel](code/05+keys-intensity.sb3) inklusive der Blöcke gefunden:
 
 ![mehr Tasten](images/05-keys-intensity.png)
 
