@@ -7,6 +7,9 @@ Das [Meowbit](https://www.kittenbot.cc/collections/frontpage/products/meowbit-co
 Das Meowbit kann auf drei Arten programmiert werden:
 
 * https://arcade.makecode.com/ von Microsoft. Das Meowbit ist eine der offiziell unterstützten Spielekonsolen
+  
+  ![Microsoft Arcade](images/00-arcade.png)
+
 * https://www.kittenbot.cc/pages/software von Kittenbot. Es gibt eine Variante namens Kittenblock von MIT Scratch mit MicroPython-Integration für Windows und macOS und eine angepasste Version des Mu-Editors, diesen leider nur für Windows.
 * https://codewith.mu/en/download von Mu-Editor. Ich habe hiermit allerdings noch nicht geschafft, die REPL (Befehlszeile) auf dem Meowbit aufzurufen.
 
