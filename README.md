@@ -31,3 +31,10 @@ Um die Hardware des Meowbit in MicroPython nutzen zu können, müssen einige Bib
 Hier ist ein erstes Programm zum Blinken der LED
 
 ![Blinkende LED](images/01-blink-led.png)
+
+## Bildschirm und Tasten
+
+Der Bildschirm hat eine Auflösung von 160 (horizontal) und 128 (vertikal). Der Ursprung (Punkt 0,0) ist oben links. Die Bildschirmmitte liegt demnach bei (80, 64).
+
+
+
