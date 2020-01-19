@@ -26,7 +26,7 @@ Um die Hardware des Meowbit in MicroPython nutzen zu können, müssen einige Bib
 * tft.py - für den Farbbildschirm
 * turtle.py - für Zeichnungen mit Turtle-Grafik
 
-## 01 Blinkende LED
+## Erster Test: 01 Blinkende LED
 
 Hier ist ein erstes Programm zum Blinken der LED
 
@@ -36,5 +36,16 @@ Hier ist ein erstes Programm zum Blinken der LED
 
 Der Bildschirm hat eine Auflösung von 160 (horizontal) und 128 (vertikal). Der Ursprung (Punkt 0,0) ist oben links. Die Bildschirmmitte liegt demnach bei (80, 64).
 
+## Befehle für Leuchtdioden (LEDs) 
 
+Dies sind die Befehle für die eine, grüne LED am Gerät oben rechts:
+
+* led1.on()   # LED an
+* led1.off()  # LED aus
+* led1.toggle()      # LED umschalten
+* led1.intensity(x)  # Helligkeit der LED
+
+Hier ein weiteres Beispiel:
+
+![LED-Helligkeit](images/02-led.png)
 
