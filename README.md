@@ -146,7 +146,15 @@ fb.text("content", x, y, color)
 tft.show(fb)
 ````
 
-Hier ist ein kleines "Hallo Welt"-Programm:
+Hier ist ein kleines ["Hallo Welt"-Programm](code/08-hello.py):
 
 ![Hallo](images/08-hello.png)
+
+Jetzt noch ein größeres Programm:
+
+
+
+Das ist das Ergebnis:
+
+![Ergebnis](images/m5_8.gif)
 
