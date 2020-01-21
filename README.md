@@ -188,7 +188,7 @@ Methoden auf der FrameBuffer-Klasse:
 
 ## Kurzdokumentation
 
-Ich habe obern bereits einige Einstiegspunkte in die [Kurzdokumentation](https://meowbit-doc.kittenbot.cn/#/micropython/micropython%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B) für die Pythonprogrammierung des Meowbits genannt. Diese Links führen auf eine chionesische Seite. Es gibt die Dokumentation des Meowbits leider im Augenblick nur so. Die chinesischen Seiten lassen sich allerdings ganz ordentlich über die Übersetzungsfunkton des Chrome-Browsers übersetzen. Hier sind die Abschnitte:
+Ich habe oben bereits einige Einstiegspunkte in die [Kurzdokumentation](https://meowbit-doc.kittenbot.cn/#/micropython/micropython%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B) für die Pythonprogrammierung des Meowbits genannt. Diese Links führen auf eine chinesische Seite. Es gibt die Dokumentation des Meowbits leider im Augenblick nur so. Die chinesischen Seiten lassen sich allerdings ganz ordentlich über die Übersetzungsfunkton des Chrome-Browsers übersetzen. Hier sind die Abschnitte:
 
 ### Grundlagen
 
