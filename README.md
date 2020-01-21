@@ -94,6 +94,8 @@ Ich habe in der Anleitung ein [komplexeres Beispiel](code/05-keys-intensity.sb3)
 
 ![mehr Tasten](images/05-keys-intensity.png)
 
+Die komplette Dokumentation zum Abfragen der Tasten liegt [hier](https://meowbit-doc.kittenbot.cn/#/micropython/reference/%E9%80%9A%E7%94%A8%E6%8C%89%E9%94%AE).
+
 ## 05 Töne & Melodien
 
 Für Töne gibt es zwei Blöcke:
@@ -118,6 +120,8 @@ Das Lied wird in drei Listen verwaltet:
 * _song_ speichert die Noten des Liedes als Index der Tonleiter (von 1 an gezählt)
 * _beat_ gibt für jede Note die Länge in Millisekunden
 
+Die Dokumentation der Musikfunktionen liegt [hier](https://meowbit-doc.kittenbot.cn/#/micropython/%E8%9C%82%E9%B8%A3%E5%99%A8).
+
 ## 08 Bildschirm
 
 Hier sind die Blocke zur Anzeige auf dem Bildschirm:
@@ -127,6 +131,13 @@ Hier sind die Blocke zur Anzeige auf dem Bildschirm:
 Dies sind die Python-Funktionen dazu:
 
 ````
+import pyb
+import framebuf
+
+tft = pyb.SCREEN()
+fbuf = bytearray(160*128*2)
+fb = framebuf.FrameBuffer(fbuf, 160, 128, framebuf.RGB565)
+
 # Fülle den Bildschirm mit einer Farbe (Hex-Code)
 fb.fill(color)
 
@@ -152,9 +163,59 @@ Hier ist ein kleines ["Hallo Welt"-Programm](code/08-hello.py):
 
 Jetzt noch ein größeres Programm:
 
-
-
 Das ist das Ergebnis:
 
 ![Ergebnis](images/m5_8.gif)
 
+Die komplette Dokumentation der Framebuffer-Klasse findet sich [hier](https://meowbit-doc.kittenbot.cn/#/micropython/reference/%E9%80%90%E5%B8%A7%E7%BC%93%E5%86%B2). Hier ist eine Zusammenfassung:
+
+* Klasse FrameBuffer (Puffer, Breite, Höhe, Höhe, Format, Schrittweite = Breite)
+
+Methoden auf der FrameBuffer-Klasse:
+
+* fill (Farbe)
+* pixel (x, y, Farbe)
+* hline (x, y, w, c)
+* vline (x, y, h, c)
+* line (x1, y1, x2, y2, c)
+* rect (x, y, b, h, c)
+* fill_rect (x, y, w, h, c)
+* text (s, x, y, c)
+* loadbmp ('x')
+* loadgif ('x', f)
+* scroll (xstep, ystep)
+* blit (fbuf, x, y, key)
+
+## Kurzdokumentation
+
+Ich habe obern bereits einige Einstiegspunkte in die [Kurzdokumentation](https://meowbit-doc.kittenbot.cn/#/micropython/micropython%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B) für die Pythonprogrammierung des Meowbits genannt. Diese Links führen auf eine chionesische Seite. Es gibt die Dokumentation des Meowbits leider im Augenblick nur so. Die chinesischen Seiten lassen sich allerdings ganz ordentlich über die Übersetzungsfunkton des Chrome-Browsers übersetzen. Hier sind die Abschnitte:
+
+### Grundlagen
+
+* Schnellstart
+* LED
+* Farbdisplay
+* Summer
+* Tastenerkennung
+* Temperatur- / Lichtsensor
+* Gyroskop
+
+### Kurzreferenz
+
+* Universelle Tastenabfrage
+* Timing-Sleep verzögern
+* Lichtsteuerung-LED
+* Pin Control-Pin
+* Externer Interrupt-ExtInt
+* Zeitsteuerung-Timer
+* Pulsweitenmodulation-PWM
+* Analog-Digital-Wandler
+* Serieller Bus-UART
+* Zweidraht-Bus-I2C
+* Vierleiter-Bus-SPI
+* Framebuf
+
+### Fortgeschritten
+
+* Zeige mehrere Sprachen
+* Kreiselwert anzeigen
