@@ -88,9 +88,65 @@ Wie die Statusleuchte an Macs:
 
 ## 04 Tasten per Interrupt
 
-Für gute Responsivität können die Tasten per Interrupt abgefragt werden. Einen passenden Block habe ich nicht gefunden (obwohl er in der [Originaldokumentation](https://meowbit-doc.kittenbot.cn/#/kittenblock/02%E6%8C%89%E9%94%AE%E6%A3%80%E6%B5%8B) abgebildet ist), aber [hier](code/04-keys.py) ist der Python-Code.
+Für gute Responsivität können die Tasten per Interrupt abgefragt werden. Einen passenden, blauen Block habe ich nicht gefunden (obwohl er in der [Originaldokumentation](https://meowbit-doc.kittenbot.cn/#/kittenblock/02%E6%8C%89%E9%94%AE%E6%A3%80%E6%B5%8B) abgebildet ist), aber [hier](code/04-keys.py) ist der Python-Code.
 
 Ich habe in der Anleitung ein [komplexeres Beispiel](code/05-keys-intensity.sb3) inklusive der Blöcke gefunden:
 
 ![mehr Tasten](images/05-keys-intensity.png)
+
+## 05 Töne & Melodien
+
+Für Töne gibt es zwei Blöcke:
+
+![Töne](images/06-sounds.png)
+
+Der erste Block kann einen Ton einer bestimmten Tonhöhe erzeugen. Mit dem zweitren Block lassen sich ganze Melodien abspielen. Die Melodie im Beispiel besteht aus 5 Noten.
+
+Das folgende Beispiel nutzt die Fähigkeit von Scratch 3, Listen zu verwalten, um darin eine Melodie zu speichern:
+
+![Zwei Tiger](images/07-zwei-tiger.png)
+
+Hier sind die Listen auf der Bühne:
+
+![Listen](images/07-zwei-tiger-listen.png)
+
+[Hier](code/07-zwei-tiger.py) ist der erzeugte Python-Code.
+
+Das Lied wird in drei Listen verwaltet:
+
+* _note_ enthält eine Tonleiter
+* _song_ speichert die Noten des Liedes als Index der Tonleiter (von 1 an gezählt)
+* _beat_ gibt für jede Note die Länge in Millisekunden
+
+## 08 Bildschirm
+
+Hier sind die Blocke zur Anzeige auf dem Bildschirm:
+
+![Bildschirm](images/08-tft-blocks.png)
+
+Dies sind die Python-Funktionen dazu:
+
+````
+# Fülle den Bildschirm mit einer Farbe (Hex-Code)
+fb.fill(color)
+
+# Zeige einen Bildpunkt bei X und Y kn einer bestimmten Farbe (ein Hex-Wert)
+fb.pixel(x, y, color)
+
+# Zeichne eine Linie zwischen dem Startpunkt x1,y1 und x2,y2 in einer bestimmten Farbe (Hex-Code) 
+fb.line(x1, y1, x2, y2, color)
+
+# Zeichne ein Rechteck von der Ecke x,y mit Breite w, Höhe h und Farbe color (Hex-Code)
+fb.rect(x, y, w, h, color)
+
+# Schreibe den Text "content" ab x,y mit Farbe color
+fb.text("content", x, y, color)
+
+# Frische den Bildschirminhalt auf
+tft.show(fb)
+````
+
+Hier ist ein kleines "Hallo Welt"-Programm:
+
+![Hallo](images/08-hello.png)
 
